@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小小理财官网预览</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .preview-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .preview-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .preview-section h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .preview-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .preview-section ul {
+            color: #666;
+            padding-left: 20px;
+        }
+        .preview-section li {
+            margin: 5px 0;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        .warning {
+            background: #f8d7da;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #dc3545;
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-success:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1>🚀 小小理财官网部署预览</h1>
+        
+        <div class="success">
+            <strong>✅ 网站文件已准备完成！</strong><br>
+            所有必要的HTML、CSS、JavaScript文件已创建，可以开始部署流程。
+        </div>
+
+        <div class="preview-section">
+            <h2>📁 文件结构</h2>
+            <p>网站包含以下文件：</p>
+            <div class="code-block">
+xiaoxiao-finance-website/
+├── index.html              # 主页面
+├── styles.css              # 样式文件
+├── script.js               # 交互脚本
+├── README.md               # 说明文档
+├── deploy-guide.md         # 部署指南
+├── generate-placeholders.html  # 占位图片生成器
+├── preview.html            # 本预览文件
+└── images/                 # 图片资源目录
+    └── README.md           # 图片说明文档
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2>🎨 网站特色</h2>
+            <ul>
+                <li><strong>响应式设计</strong> - 完美适配手机、平板、电脑</li>
+                <li><strong>现代化UI</strong> - 简洁美观的界面设计</li>
+                <li><strong>微信分享优化</strong> - 针对微信分享平台优化</li>
+                <li><strong>SEO友好</strong> - 搜索引擎优化</li>
+                <li><strong>快速加载</strong> - 性能优化，快速访问</li>
+                <li><strong>无障碍访问</strong> - 支持键盘导航和屏幕阅读器</li>
+            </ul>
+        </div>
+
+        <div class="preview-section">
+            <h2>📸 图片资源</h2>
+            <div class="warning">
+                <strong>⚠️ 重要提醒：</strong> 需要准备以下图片文件并放置在 images/ 目录下：
+            </div>
+            <ul>
+                <li>app-icon.png (512x512px) - 应用图标</li>
+                <li>homepage-screenshot.png - 首页截图</li>
+                <li>record-screenshot.png - 记账页面截图</li>
+                <li>statistics-screenshot.png - 统计页面截图</li>
+                <li>details-screenshot.png - 明细页面截图</li>
+                <li>profile-screenshot.png - 个人中心截图</li>
+                <li>harmonyos-logo.png (64x64px) - HarmonyOS Logo</li>
+                <li>favicon.ico (32x32px) - 网站图标</li>
+            </ul>
+            <p>
+                <a href="generate-placeholders.html" class="btn btn-success">生成占位图片</a>
+                可以使用占位图片生成器快速创建临时图片进行测试。
+            </p>
+        </div>
+
+        <div class="preview-section">
+            <h2>🚀 部署方式</h2>
+            <p>推荐以下三种部署方式：</p>
+            <ul>
+                <li><strong>阿里云 OSS</strong> - 静态网站托管，稳定可靠</li>
+                <li><strong>Coding Pages</strong> - 免费托管，简单易用</li>
+                <li><strong>GitHub Pages</strong> - 开源友好，版本控制</li>
+            </ul>
+            <p>
+                <a href="deploy-guide.md" class="btn">查看详细部署指南</a>
+            </p>
+        </div>
+
+        <div class="preview-section">
+            <h2>📱 微信分享优化</h2>
+            <p>网站已针对微信分享进行了全面优化：</p>
+            <ul>
+                <li>添加了微信专用的Open Graph标签</li>
+                <li>优化了分享标题和描述</li>
+                <li>设置了合适的分享图片</li>
+                <li>支持微信内置浏览器</li>
+                <li>兼容微信分享API</li>
+            </ul>
+        </div>
+
+        <div class="preview-section">
+            <h2>🔧 自定义配置</h2>
+            <p>部署前需要修改的配置：</p>
+            <div class="code-block">
+联系邮箱: chc_cz0112@163.com
+分享标题: 小小理财 - 个人财务管理专家
+分享描述: 专业的个人财务管理应用，轻松管理收支、记录账单、分析财务状况
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h2>📊 性能优化</h2>
+            <ul>
+                <li>图片懒加载</li>
+                <li>CSS和JS压缩</li>
+                <li>资源预加载</li>
+                <li>缓存策略</li>
+                <li>响应式图片</li>
+            </ul>
+        </div>
+
+        <div class="preview-section">
+            <h2>🎯 下一步操作</h2>
+            <ol>
+                <li>准备所有图片资源</li>
+                <li>使用占位图片生成器创建临时图片</li>
+                <li>选择部署方式并按照指南操作</li>
+                <li>测试网站功能和微信分享</li>
+                <li>替换为真实的应用截图</li>
+                <li>配置自定义域名（可选）</li>
+            </ol>
+        </div>
+
+        <div class="highlight">
+            <strong>💡 提示：</strong> 
+            建议先在本地测试网站效果，确认无误后再进行部署。
+            可以使用浏览器打开 index.html 文件进行预览。
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="btn btn-success">预览网站</a>
+            <a href="generate-placeholders.html" class="btn">生成占位图片</a>
+            <a href="deploy-guide.md" class="btn">查看部署指南</a>
+        </div>
+    </div>
+</body>
+</html>

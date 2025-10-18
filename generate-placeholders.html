@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成占位图片</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .placeholder {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            text-align: center;
+            background: #fafafa;
+        }
+        .placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>小小理财 - 占位图片生成器</h1>
+        
+        <div class="info">
+            <strong>说明：</strong> 这个工具可以生成网站所需的占位图片。右键点击图片选择"另存为"即可下载。
+        </div>
+
+        <div class="placeholder">
+            <h3>应用图标 (app-icon.png)</h3>
+            <canvas id="app-icon" width="512" height="512"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('app-icon', 'app-icon.png')">下载应用图标</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>首页截图 (homepage-screenshot.png)</h3>
+            <canvas id="homepage" width="375" height="812"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('homepage', 'homepage-screenshot.png')">下载首页截图</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>记账页面截图 (record-screenshot.png)</h3>
+            <canvas id="record" width="375" height="812"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('record', 'record-screenshot.png')">下载记账截图</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>统计页面截图 (statistics-screenshot.png)</h3>
+            <canvas id="statistics" width="375" height="812"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('statistics', 'statistics-screenshot.png')">下载统计截图</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>明细页面截图 (details-screenshot.png)</h3>
+            <canvas id="details" width="375" height="812"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('details', 'details-screenshot.png')">下载明细截图</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>个人中心截图 (profile-screenshot.png)</h3>
+            <canvas id="profile" width="375" height="812"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('profile', 'profile-screenshot.png')">下载个人中心截图</button>
+        </div>
+
+        <div class="placeholder">
+            <h3>HarmonyOS Logo (harmonyos-logo.png)</h3>
+            <canvas id="harmonyos" width="64" height="64"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadImage('harmonyos', 'harmonyos-logo.png')">下载HarmonyOS Logo</button>
+        </div>
+
+        <div class="info">
+            <strong>使用说明：</strong>
+            <ol>
+                <li>点击对应的"下载"按钮下载图片</li>
+                <li>将下载的图片重命名为对应的文件名</li>
+                <li>将图片放置到网站的 images/ 目录下</li>
+                <li>这些是占位图片，建议后续替换为真实的应用截图</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // 生成应用图标
+        function generateAppIcon() {
+            const canvas = document.getElementById('app-icon');
+            const ctx = canvas.getContext('2d');
+            
+            // 背景渐变
+            const gradient = ctx.createLinearGradient(0, 0, 512, 512);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 512, 512);
+            
+            // 圆角
+            ctx.globalCompositeOperation = 'destination-in';
+            ctx.beginPath();
+            ctx.roundRect(0, 0, 512, 512, 60);
+            ctx.fill();
+            
+            ctx.globalCompositeOperation = 'source-over';
+            
+            // 图标
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 200px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('💰', 256, 256);
+        }
+
+        // 生成手机截图
+        function generateScreenshot(canvasId, title, color) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // 背景
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, 375, 812);
+            
+            // 状态栏
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, 375, 44);
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('07:48', 187, 28);
+            
+            // 标题栏
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 44, 375, 60);
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 20px Arial';
+            ctx.fillText(title, 187, 80);
+            
+            // 内容区域
+            ctx.fillStyle = '#fff';
+            ctx.fillRect(20, 120, 335, 600);
+            
+            // 内容文字
+            ctx.fillStyle = '#333';
+            ctx.font = '16px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText('这里是' + title + '的内容展示区域', 40, 160);
+            ctx.fillText('请替换为真实的应用截图', 40, 190);
+            
+            // 底部导航
+            ctx.fillStyle = '#f8f9fa';
+            ctx.fillRect(0, 750, 375, 62);
+            ctx.fillStyle = '#666';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('首页', 37, 790);
+            ctx.fillText('记账', 112, 790);
+            ctx.fillText('统计', 187, 790);
+            ctx.fillText('明细', 262, 790);
+            ctx.fillText('我的', 337, 790);
+        }
+
+        // 生成HarmonyOS Logo
+        function generateHarmonyOSLogo() {
+            const canvas = document.getElementById('harmonyos');
+            const ctx = canvas.getContext('2d');
+            
+            // 背景
+            ctx.fillStyle = '#FF6B00';
+            ctx.fillRect(0, 0, 64, 64);
+            
+            // 文字
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 12px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('H', 32, 32);
+        }
+
+        // 下载图片
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        // 页面加载完成后生成所有图片
+        window.onload = function() {
+            generateAppIcon();
+            generateScreenshot('homepage', '首页', '#28a745');
+            generateScreenshot('record', '记账', '#007bff');
+            generateScreenshot('statistics', '统计', '#6f42c1');
+            generateScreenshot('details', '明细', '#fd7e14');
+            generateScreenshot('profile', '个人中心', '#20c997');
+            generateHarmonyOSLogo();
+        };
+    </script>
+</body>
+</html>
