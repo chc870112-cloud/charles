@@ -1,5 +1,7 @@
 # 小小理财 - 应用官网
 
+https://chc870112-cloud.github.io/charles/index.html
+
 这是小小理财应用的官方网站，用于展示应用功能、特色和下载信息。
 
 ## 📱 应用介绍
