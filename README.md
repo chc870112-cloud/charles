@@ -1,12 +1,12 @@
-# 小小理财 - 应用官网
+# 小喵记账 - 应用官网
 
 https://chc870112-cloud.github.io/charles/index.html
 
-这是小小理财应用的官方网站，用于展示应用功能、特色和下载信息。
+这是小喵记账应用的官方网站，用于展示应用功能、特色和下载信息。
 
 ## 📱 应用介绍
 
-小小理财是一款专业的个人财务管理应用，帮助用户轻松管理收支、记录账单、分析财务状况，让理财变得简单高效。
+小喵记账是一款专业的个人财务管理应用，帮助用户轻松管理收支、记录账单、分析财务状况，让理财变得简单高效。
 
 ## 🌟 主要功能
 
@@ -117,7 +117,7 @@ xiaoxiao-finance-website/
 在`index.html`的`<head>`部分修改Open Graph标签：
 
 ```html
-<meta property="og:title" content="小小理财 - 个人财务管理专家">
+<meta property="og:title" content="小喵记账 - 个人财务管理专家">
 <meta property="og:description" content="专业的个人财务管理应用，轻松管理收支、记录账单、分析财务状况">
 <meta property="og:image" content="./images/app-icon.png">
 <meta property="og:url" content="https://your-domain.com">
@@ -178,7 +178,7 @@ xiaoxiao-finance-website/
 
 ## 📄 许可证
 
-© 2024 小小理财. 让理财变得简单高效.
+© 2024 小喵记账. 让理财变得简单高效.
 
 ---
 
